@@ -1,0 +1,2 @@
+Flask
+gunicorn #this library is used to put up this website onto a production server before this we were working on the local server now we'll shift the website to a production server using gunicorn

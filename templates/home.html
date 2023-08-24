@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<title>
+    {{company_name}}
+</title>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jovian Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        #banner {
+            height: 360px;
+            object-fit: cover;
+            width: 100%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <div class="container">
+
+        <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+        <img class="img-fluid" id="banner" src="/static/front_page.jpg" height="320px">
+        <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+        <div class ="row" style="margin-bottom: 16px;">
+            
+
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore
+                    magna aliqua.
+                    Commodo nulla facilisi nullam vehicula ipsum a arcu cursus.
+                    Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales.
+                    Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.
+                    Mattis molestie a iaculis at erat pellentesque. S
+                    it amet porttitor eget dolor morbi non arcu risus. Tortor vitae purus faucibus ornare suspendisse sed nisi
+                    lacus.
+                    Nibh nisl condimentum id venenatis a condimentum. Suspendisse in est ante in nibh mauris cursus mattis. Ipsu
+                    m dolor sit amet consectetur adipiscing elit pellentesque habitant. Urna condimentum mattis pellentesque id.
+                    Suscipit tellus mauris a diam maecenas sed enim ut. Non nisi est sit amet.
+                </p>
+        
+
+            
+        </div>
+        <h2 class="text-center mt-2 mb-4">
+            Open Positions
+        </h2>
+                <div>
+                    <p>
+
+                    {% for job in jobs %}
+                            {% include 'job._item.html' %}
+                    {% endfor %}
+
+
+
+                    </p>
+                </div>
+
+    </div>
+    <div class="text-center">
+            <button class="btn btn-primary btn-lg">Contact Us</button>
+            
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>
